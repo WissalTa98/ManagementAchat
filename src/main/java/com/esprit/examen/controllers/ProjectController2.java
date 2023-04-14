@@ -20,6 +20,7 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 @RequiredArgsConstructor
+
 public class ProjectController2 {
     private final IProduitService produitService;
 
@@ -72,27 +73,23 @@ public class ProjectController2 {
 		return produitService.getRevenuBrutProduit(idProduit, startDate, endDate);
 	}*/
 
+
     private final IFactureService factureService;
 
     @GetMapping
     public List<Facture> getFactures() {
         return factureService.retrieveAllFactures();
     }
-
-
     @GetMapping("/{facture-id}")
 
     public Facture retrieveFacture(@PathVariable("facture-id") Long factureId) {
         return factureService.retrieveFacture(factureId);
     }
-
-
     @PostMapping
     public Facture addFacture(@RequestBody Facture f) {
         Facture facture = factureService.addFacture(f);
         return facture;
     }
-
     /*
      * une facture peut etre annulé si elle a été saisie par erreur Pour ce
      * faire, il suffit de mettre le champs active à false
