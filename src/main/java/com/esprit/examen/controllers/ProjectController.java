@@ -24,9 +24,12 @@ public class ProjectController {
     }
 
 
+<<<<<<< HEAD
     public String sayeHi(){
         return "Hi";
     }
+=======
+>>>>>>> f71611660359c7581ab8bc00ee2f081d22cc64f9
 
     /* Ajouter en produit tout en lui affectant la catégorie produit et le stock associés */
     @PostMapping
@@ -57,4 +60,13 @@ public class ProjectController {
     }
 
 
+	@GetMapping("/{stock---id}")
+	public Stock retrieveStock(@PathVariable("stock-id") Long stockId) {
+		return stockService.retrieveStock(stockId);
+	}
+
+	@GetMapping("/{secteurActivite-id}")
+	public SecteurActivite retrieveSecteurActivite(@PathVariable("secteurActivite-id") Long secteurActiviteId) {
+		return secteurActiviteService.retrieveSecteurActivite(secteurActiviteId);
+	}
 }
