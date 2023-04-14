@@ -27,10 +27,6 @@ public class ProjectController {
 		return stockService.retrieveStock(stockId);
 	}
 
-    @GetMapping("/{produit-id}")
-    public Produit retrieveRayon(@PathVariable("produit-id") Long produitId) {
-        return produitService.retrieveProduit(produitId);
-    }
 
     /* Ajouter en produit tout en lui affectant la catégorie produit et le stock associés */
     @PostMapping
@@ -59,4 +55,13 @@ public class ProjectController {
     }
 
 
+	@GetMapping("/{stock---id}")
+	public Stock retrieveStock(@PathVariable("stock-id") Long stockId) {
+		return stockService.retrieveStock(stockId);
+	}
+
+	@GetMapping("/{secteurActivite-id}")
+	public SecteurActivite retrieveSecteurActivite(@PathVariable("secteurActivite-id") Long secteurActiviteId) {
+		return secteurActiviteService.retrieveSecteurActivite(secteurActiviteId);
+	}
 }
