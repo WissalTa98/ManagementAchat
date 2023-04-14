@@ -17,12 +17,12 @@ public class ProjectController {
 
     @GetMapping
     public List<Produit> getProduits() {
+        System.out.println("get produits");
         return produitService.retrieveAllProduits();
     }
 
-    @GetMapping("/{produit-id}")
-    public Produit retrieveRayon(@PathVariable("produit-id") Long produitId) {
-        return produitService.retrieveProduit(produitId);
+    public String sayeHello(){
+        return "Hello";
     }
 
     /* Ajouter en produit tout en lui affectant la catégorie produit et le stock associés */
@@ -35,6 +35,8 @@ public class ProjectController {
     public void removeProduit(@PathVariable("produit-id") Long produitId) {
         produitService.deleteProduit(produitId);
     }
+
+
 
     @PutMapping
     public Produit modifyProduit(@RequestBody Produit p) {
