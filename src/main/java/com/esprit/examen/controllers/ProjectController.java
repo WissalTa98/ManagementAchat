@@ -8,4 +8,13 @@ import io.swagger.annotations.Api;
 @CrossOrigin("*")
 @RequiredArgsConstructor
 public class ProjectController {
+    //add product by wissal
+    private final IProduitService produitService;
+
+	@GetMapping
+	public List<Produit> getProduits() {
+		return produitService.retrieveAllProduits();
+	}
+
+
 }
