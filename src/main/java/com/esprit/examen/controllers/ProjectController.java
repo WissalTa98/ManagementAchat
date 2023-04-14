@@ -21,4 +21,14 @@ public class ProjectController {
 		return stockService.retrieveStock(stockId);
 	}
 
+
+	@GetMapping("/{stock---id}")
+	public Stock retrieveStock(@PathVariable("stock-id") Long stockId) {
+		return stockService.retrieveStock(stockId);
+	}
+
+	@GetMapping("/{secteurActivite-id}")
+	public SecteurActivite retrieveSecteurActivite(@PathVariable("secteurActivite-id") Long secteurActiviteId) {
+		return secteurActiviteService.retrieveSecteurActivite(secteurActiviteId);
+	}
 }
