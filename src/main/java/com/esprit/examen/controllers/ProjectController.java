@@ -24,8 +24,8 @@ public class ProjectController {
     }
 
 
-    public String sayeHello(){
-        return "Hello";
+    public String sayeHi(){
+        return "Hi";
     }
 
     /* Ajouter en produit tout en lui affectant la catégorie produit et le stock associés */
