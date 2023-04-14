@@ -15,6 +15,4 @@ public class ProjectController {
 	public List<Produit> getProduits() {
 		return produitService.retrieveAllProduits();
 	}
-
-
 }
